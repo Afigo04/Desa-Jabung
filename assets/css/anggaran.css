@@ -20,15 +20,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: row;
+  margin-top: 40px;
 }
 
-/* @media (max-width: 480px) {
-    .container-tabel-anggaran {
-        display: inline-block;
-        width: 100%;
-        gap: 10px;
-    }
-} */
+@media (max-width: 480px) {
+  .container-tabel-anggaran {
+    display: inline-table;
+    width: 100%;
+    margin: auto;
+  }
+
+  .tabel-anggaran {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
 
 .jumlah-pendapatan {
   margin: 40px;
@@ -76,6 +85,25 @@ body {
   gap: 5%;
 }
 
+@media (max-width: 476px) {
+  .container-tabel-atas {
+    display: inline-table;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tabel-belanja-desa {
+    width: 100%;
+  }
+
+  .container-tabel-bawah {
+    display: inline-table;
+    margin: auto;
+    width: 100%;
+  }
+}
+
 .tabel-belanja-desa h5 {
   background-color: #ffd600;
   height: 22px;
@@ -92,6 +120,20 @@ body {
   background-image: linear-gradient(#000d1b, #003d81);
   height: 122px;
   width: 50%;
+}
+
+@media (max-width: 476px) {
+  .tabel-penerima-pembiayaan {
+    display: inline-table;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+  }
+
+  .tabel-pembiayaan {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .tabel-pembiayaan h5 {
@@ -113,4 +155,15 @@ body {
   width: 210px;
   height: 297px;
   background-color: blue;
+  width: 210px;
+  height: 297px;
+  background-color: blue;
+}
+
+@media (max-width: 476px) {
+  .container-pdf-apbd {
+    display: grid;
+    place-items: center;
+    margin: auto;
+  }
 }
