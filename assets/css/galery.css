@@ -1,0 +1,42 @@
+.background-gunung {
+    background-image: url("../img/Gunung.png");
+    background-position: 50% 30%;
+    position: relative;
+    background-size: cover;
+}
+
+.background-gunung::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 36, 76, 0.2), rgba(0, 61, 129, 0.5));
+    pointer-events: none;
+}
+
+.page-title {
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    flex: 1 1 calc(16.666% - 20px);
+    box-sizing: border-box;
+    border-radius: 8px; 
+}
+
