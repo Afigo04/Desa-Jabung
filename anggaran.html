@@ -23,6 +23,9 @@
     <link href="assets/css/navbar.css" rel="stylesheet" />
     <link href="assets/css/footer.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/anggaran.css">
+    
+    <!-- Vendor Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header id="header" class="header d-flex align-items-center fixed-top">
@@ -51,7 +54,7 @@
     </header>
     <main class="main">
         <!-- Page Title -->
-        <div class="page-title dark-background background-gunung">
+        <div class="page-title background-gunung">
           <div class="container position-relative p-5">
             <nav class="breadcrumbs" style="position: relative; z-index: 9;">
               <h2>Transparansi Anggaran Pendapatan dan Belanja Daerah</h2>
@@ -69,21 +72,21 @@
           <div class="parent-container-tabel-anggaran">
             <div class="container-tabel-anggaran">
                 <div class="tabel-anggaran">
-                    <h5></h5>
+                    <h5>Pendapatan Asli Desa</h5>
                 </div>
                 <div class="tabel-anggaran">
                     <h5></h5>
                 </div>
                 <div class="tabel-anggaran">
-                    <h5></h5>
+                    <h5>Bagi Hasil Pajak dan Retribusi</h5>
                 </div>
             </div>
             <div class="container-tabel-anggaran">
                 <div class="tabel-anggaran">
-                    <h5></h5>
+                    <h5>Alokasi Dana Desa</h5>
                 </div>
                 <div class="tabel-anggaran">
-                    <h5></h5> 
+                    <h5>Pendapatan Lainnya</h5> 
                 </div>
                 <div class="tabel-anggaran">
                     <h5></h5>
@@ -282,56 +285,83 @@
          <!-- end pembiayaan data section -->
 
          <!-- APBD desa jabung section -->
-        <section class="container">
-            <!-- section title -->
-            <div>
-                <h2 style="text-align: center; color: #003d81;">APBDesa Jabung</h2>
-             </div>
-             <!-- end section title -->
-            <div class="container-pdf-apbd">
-                <div class="pdf-apbd"></div>
-                <div class="pdf-apbd"></div>
-                <div class="pdf-apbd"></div>
-                <div class="pdf-apbd"></div>
+        <!-- Services Section -->
+      <section id="services" class="services section light-background">
+        <h2 style="text-align: center; color: #003d81;">APBDesa Jabung</h2>
+        <div class="container swiper d-flex justify-content-center">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <a href="#" class="pdf-container">
+                <img src="./assets/img/pdf-icon.png" alt="" />
+                <p>Laporan APBD Tahun 2021</p>
+              </a>
             </div>
-        </section>
-        <!-- end APBD Desa Jabung -->
-
-        <!-- Footer -->
-        <footer id="footer" class="custom-footer">
-            <div class="container p-4">
-              <div class="d-flex flex-column justify-content-center align-items-center gap-2">
-                <div class="d-flex gap-3 custom-icon">
-                  <a href="#">
-                    <img src="./assets/img/email-logo.png" alt="" />
-                  </a>
-                  <a href="#">
-                    <img src="./assets/img/ig-logo.png" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./assets/img/fb-logo.png" alt="" />
-                  </a>
-                  <a href="">
-                    <img src="./assets/img/ytb-logo.png" alt="" />
-                  </a>
-                </div>
-                <p class="text-white text-center mb-0 mt-2">JABUNG.GO.ID</p>
-              </div>
-              <hr style="border-bottom: 3px solid #fff" />
-              <div class="d-flex flex-column gap-1 justify-content-between">
-                <div class="text-white footer-text">
-                  <p class="text-center text-white mb-2">Jl. Nama Jalan no jalan, Ponorogo, Jawa Timur, Indonesia</p>
-                </div>
-                <div class="text-white text-center">© 2024 Dinas Komunikasi, Informasi dan Statistik Desa Jabung</div>
-              </div>
+            <div class="swiper-slide">
+              <a href="#" class="pdf-container">
+                <img src="./assets/img/pdf-icon.png" alt="" />
+                <p>Laporan APBD Tahun 2021</p>
+              </a>
             </div>
-          </footer>
-      
-          <!-- Vendor JS Files -->
-          <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-          <!-- Main JS File -->
-          <script src="assets/js/main.js"></script>
-      </main>
+            <div class="swiper-slide">
+              <a href="#" class="pdf-container">
+                <img src="./assets/img/pdf-icon.png" alt="" />
+                <p>Laporan APBD Tahun 2021</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="pdf-container">
+                <img src="./assets/img/pdf-icon.png" alt="" />
+                <p>Laporan APBD Tahun 2021</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#" class="pdf-container">
+                <img src="./assets/img/pdf-icon.png" alt="" />
+                <p>Laporan APBD Tahun 2021</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </section>
+      <!-- /Features Cards Section -->
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="custom-footer">
+        <div class="container p-4">
+          <div class="d-flex flex-column justify-content-center align-items-center gap-2">
+            <div class="d-flex gap-3 custom-icon">
+              <a href="#">
+                <img src="./assets/img/email-logo.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="./assets/img/ig-logo.png" alt="" />
+              </a>
+              <a href="">
+                <img src="./assets/img/fb-logo.png" alt="" />
+              </a>
+              <a href="">
+                <img src="./assets/img/ytb-logo.png" alt="" />
+              </a>
+            </div>
+            <p class="text-white text-center mb-0 mt-2">JABUNG.GO.ID</p>
+          </div>
+          <hr style="border-bottom: 3px solid #fff" />
+          <div class="d-flex flex-column gap-1 justify-content-between">
+            <div class="text-white footer-text">
+              <p class="text-center text-white mb-2">Jl. Nama Jalan no jalan, Ponorogo, Jawa Timur, Indonesia</p>
+            </div>
+            <div class="text-white text-center">© 2024 Dinas Komunikasi, Informasi dan Statistik Desa Jabung</div>
+          </div>
+        </div>
+      </footer>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="./assets/js/swiper.js"></script>
 </body>
 </html>
