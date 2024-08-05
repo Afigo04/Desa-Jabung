@@ -49,15 +49,25 @@ body {
 }
 
 .col-lg-8 {
-  width: 66.66%;
+  width: 100%;
 }
 
 .col-lg-4 {
-  width: 33.33%;
+  width: 100%;
 }
 
 .col-lg-12 {
   width: 100%;
+}
+
+@media (min-width: 992px) {
+  .col-lg-8 {
+    width: 66.66%;
+  }
+  
+  .col-lg-4 {
+    width: 33.33%;
+  }
 }
 
 .header {
@@ -72,33 +82,56 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .title-box {
-  flex: 2;
+  flex: 1 1 100%;
   background-color: #fff; /* White background */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-right: 20px; /* Add space between boxes */
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .title-box {
+    flex: 2;
+    margin-right: 20px; /* Add space between boxes */
+    margin-bottom: 0;
+  }
 }
 
 .menu-box {
-  flex: 1;
+  flex: 1 1 100%;
   background: linear-gradient(135deg, #001f3f, #004080); /* Gradient background */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 992px) {
+  .menu-box {
+    flex: 1;
+  }
+}
+
 .title-with-image {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   align-items: flex-start;
 }
 
+@media (min-width: 992px) {
+  .title-with-image {
+    flex-direction: row;
+  }
+}
+
 .title {
-  flex: 2;
+  flex: 1;
 }
 
 .image {
@@ -116,17 +149,28 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .title h1 {
-  font-size: 32px; /* Larger title font for full-screen */
+  font-size: 28px;
   margin-bottom: 15px;
   color: #333;
 }
 
 .title p {
-  font-size: 20px; /* Larger paragraph font */
+  font-size: 18px;
   color: #666;
+}
+
+@media (min-width: 992px) {
+  .title h1 {
+    font-size: 32px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
 }
 
 .menu-item {
@@ -138,15 +182,27 @@ body {
   background-color: rgba(0, 0, 0, 0.2); /* Slightly dark background for menu items */
 }
 
+@media (min-width: 1200px) {
+  .menu-item {
+    font-size: 20px;
+  }
+}
+
 .button {
   display: inline-block;
-  margin-top: 15px; /* Margin for spacing */
+  margin-top: 15px;
   padding: 12px 24px;
   background-color: #ffc107;
   color: #001f3f;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .button {
+    font-size: 18px;
+  }
 }
 
 .card-grid,
@@ -165,8 +221,22 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  flex: 1 1 calc(25% - 20px); /* Four cards per row to fill width */
+  flex: 1 1 100%;
   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .card,
+  .budget-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .card,
+  .budget-card {
+    flex: 1 1 calc(25% - 20px); /* Four cards per row on desktops */
+  }
 }
 
 .card img {
@@ -177,14 +247,28 @@ body {
 
 .card h2,
 .budget-card p {
-  font-size: 22px;
+  font-size: 18px;
   margin: 15px 0;
   color: #ffffff;
 }
 
+@media (min-width: 1200px) {
+  .card h2,
+  .budget-card p {
+    font-size: 22px;
+  }
+}
+
 .budget-card h3 {
-  font-size: 26px;
+  font-size: 22px;
   color: #ffffff;
+  margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .budget-card h3 {
+    font-size: 26px;
+  }
 }
 
 .gallery-grid {
@@ -194,9 +278,21 @@ body {
 }
 
 .gallery-grid img {
-  flex: 1 1 calc(16.666% - 20px);
+  flex: 1 1 calc(50% - 20px);
   box-sizing: border-box;
   border-radius: 8px; 
+}
+
+@media (min-width: 768px) {
+  .gallery-grid img {
+    flex: 1 1 calc(33.33% - 20px); /* Three images per row on tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-grid img {
+    flex: 1 1 calc(16.666% - 20px); /* Six images per row on desktops */
+  }
 }
 
 .map-grid img {
@@ -206,11 +302,18 @@ body {
 }
 
 .section-title {
-  font-size: 36px; /* Larger section title for full-screen */
+  font-size: 28px;
   color: #2c3e50;
   margin-bottom: 30px;
   text-align: center;
 }
+
+@media (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
 .content {
   padding: 20px;
   border-radius: 8px;
@@ -220,29 +323,6 @@ body {
   background: linear-gradient(135deg, #001f3f, #004080); /* Blue gradient background */
   padding: 20px;
   border-radius: 8px;
-}
-
-@media (min-width: 1200px) {
-  .title h1 {
-    font-size: 36px; /* Larger title font for full-screen desktop */
-  }
-
-  .title p {
-    font-size: 22px; /* Larger paragraph font for full-screen desktop */
-  }
-
-  .card,
-  .budget-card {
-    flex: 1 1 calc(25% - 20px); /* Adjusted for four cards per row */
-  }
-
-  .menu-item {
-    font-size: 20px; /* Larger font size for menu items */
-  }
-
-  .button {
-    font-size: 18px; /* Larger button font size */
-  }
 }
 
 /* New CSS for Transparansi Anggaran */
@@ -261,13 +341,25 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
-  flex: 1 1 calc(30% - 20px); /* Three cards per row */
+  flex: 1 1 100%;
   box-sizing: border-box;
   margin: 10px 0;
 }
 
+@media (min-width: 768px) {
+  .budget-card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on tablets */
+  }
+}
+
+@media (min-width: 1200px) {
+  .budget-card {
+    flex: 1 1 calc(30% - 20px); /* Three cards per row on desktops */
+  }
+}
+
 .budget-card p {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0;
   padding: 10px 0;
   background-color: #ffc107; /* Yellow background color */
@@ -275,9 +367,21 @@ body {
   color: #001f3f; /* Navy blue text color */
 }
 
+@media (min-width: 1200px) {
+  .budget-card p {
+    font-size: 22px;
+  }
+}
+
 .budget-card h3 {
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+  .budget-card h3 {
+    font-size: 26px;
+  }
 }
 
 .more-info-btn {
@@ -294,14 +398,4 @@ body {
 
 .text-center {
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  .section-title {
-    font-size: 40px;
-  }
-  
-  .budget-card {
-    flex: 1 1 calc(30% - 20px); /* Three cards per row */
-  }
 }
